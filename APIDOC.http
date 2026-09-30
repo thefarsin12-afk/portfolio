@@ -9,7 +9,7 @@ Content-Type: application/json
     "password":"admin@123"
 }
 
-#===== Eduaction =====
+#===== education =====
 # api for eduaction all records listing
 ###
 GET http://127.0.0.1:8000/about/
@@ -64,23 +64,26 @@ Authorization: Basic admin:admin@123
 #===eduaction===
 #api for calling eduaction listing all records
 ###
-GET http://127.0.0.1:8000/eduaction/
+GET http://127.0.0.1:8000/education/
 Accept: application/json
 Authorization: Basic admin:admin@123
 
 # api for creating eduction record
 ###
-POST http://127.0.0.1:8000/eduaction/
+POST http://127.0.0.1:8000/education/
 Content-Type: application/json
 Authorization: Basic admin:admin@123
 
 {
-  
-  "institution": "Majlis Arts and Science College, Puramannur",
-  "degree": "BA Multimedia",
-  "start_date": "2023-01-01",
-  "end_date": "2026-12-31",
-  "grade_or_cgpa": "5.75",
-  "description": "Bachelor of Arts in Multimedia under the University of Calicut."
-
+  "institution": "Rajagiri College of Engineering and Technology",
+  "degree": "B.Tech Computer Science",
+  "start_date": "2020-08-01",
+  "end_date": "2024-05-01",
+  "grade_or_cgpa": "8.2",
+  "description": "Focused on software development, database management, web technologies, and data structures."
 }
+
+# api for detail
+###
+GET http://127.0.0.1:8000/education/2/
+Accept: application/json

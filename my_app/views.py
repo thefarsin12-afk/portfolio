@@ -129,3 +129,13 @@ class EducationListCreateView(APIView):
 
         else:
             return Response(data=serializer_instant.errors)
+
+class EductionRetrieveUpdateDelete(APIView):
+
+    def get(self,request,pk=None):
+
+        qs = Education.objects.get(id=pk)
+
+        serializer_instants = EducationSerializer(qs)
+
+        return Response(data=serializer_instants.data)

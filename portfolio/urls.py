@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from my_app.views import AdminRegisterView
 from my_app.views import AboutListCreateView,AboutRetrieveUpdateDelete
-from my_app.views import EducationListCreateView
+from my_app.views import EducationListCreateView,EductionRetrieveUpdateDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,6 +31,7 @@ urlpatterns = [
     path('about/<int:pk>/',AboutRetrieveUpdateDelete.as_view()),
 
     #eduaction api rough
-    path('eduaction/',EducationListCreateView.as_view()),
+    path('education/',EducationListCreateView.as_view()),
+    path('education/<int:pk>/',EductionRetrieveUpdateDelete.as_view()),
 
 ]
