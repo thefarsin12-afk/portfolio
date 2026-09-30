@@ -27,7 +27,7 @@ class AdminRegisterView(APIView):
 
             return Response(data=serializer_instants.data)
 
-class EductionListCreateView(APIView):
+class AboutListCreateView(APIView):
 
     authentication_classes = [authentication.BasicAuthentication]
 
@@ -58,7 +58,7 @@ class EductionListCreateView(APIView):
         else:
             return Response(data=serializer_instans.errors)
 
-class EducationRetrieveUpdateDelete(APIView):
+class AboutRetrieveUpdateDelete(APIView):
 
     authentication_classes = [authentication.BasicAuthentication]
 

@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from my_app.views import AdminRegisterView
-from my_app.views import EductionListCreateView,EducationRetrieveUpdateDelete
+from my_app.views import AboutListCreateView,AboutRetrieveUpdateDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin-register/',AdminRegisterView.as_view()),
 
     #about api rough
-    path('about/',EductionListCreateView.as_view()),
-    path('about/<int:pk>/',EducationRetrieveUpdateDelete.as_view()),
+    path('about/',AboutListCreateView.as_view()),
+    path('about/<int:pk>/',AboutRetrieveUpdateDelete.as_view()),
 
 ]
