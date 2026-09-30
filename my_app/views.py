@@ -113,4 +113,19 @@ class EducationListCreateView(APIView):
 
         return Response(data=serializer_instants.data)
 
+    def post(self,request):
 
+        form_data = request.data
+
+        serializer_instant = EducationSerializer(data=form_data)
+
+        if serializer_instant.is_valid():
+
+            cleened_data = serializer_instant.validated_data
+
+            Education.objects.create(**cleened_data)
+
+            return Response(data=serializer_instant.data)
+
+        else:
+            return Response(data=serializer_instant.errors)
