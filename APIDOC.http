@@ -60,3 +60,10 @@ Authorization: Basic admin:admin@123
 DELETE http://127.0.0.1:8000/about/2/
 Accept: application/json
 Authorization: Basic admin:admin@123
+
+#===eduaction===
+#api for calling eduaction listing all records
+###
+GET http://127.0.0.1:8000/eduaction/
+Accept: application/json
+Authorization: Basic admin:admin@123

@@ -6,8 +6,8 @@ from rest_framework.response import Response
 from rest_framework import authentication,permissions
 
 from my_app.serializer import AdminRegisterSerializer
-from my_app.models import About
-from my_app.serializer import AboutSerializer
+from my_app.models import About,Education
+from my_app.serializer import AboutSerializer,EducationSerializer
 
 # Create your views here.
 
@@ -98,5 +98,19 @@ class AboutRetrieveUpdateDelete(APIView):
         qs.delete()
 
         return Response(data=seializer_instat.data)
+
+class EducationListCreateView(APIView):
+
+    authentication_classes = [authentication.BasicAuthentication]
+
+    permission_classes = [permissions.IsAdminUser]
+
+    def get(self,reuqest):
+
+        qs = Education.objects.all()
+
+        serializer_instants = EducationSerializer(qs,many=True)
+
+        return Response(data=serializer_instants.data)
 
 

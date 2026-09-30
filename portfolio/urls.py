@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from my_app.views import AdminRegisterView
 from my_app.views import AboutListCreateView,AboutRetrieveUpdateDelete
+from my_app.views import EducationListCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +29,8 @@ urlpatterns = [
     #about api rough
     path('about/',AboutListCreateView.as_view()),
     path('about/<int:pk>/',AboutRetrieveUpdateDelete.as_view()),
+
+    #eduaction api rough
+    path('eduaction/',EducationListCreateView.as_view()),
 
 ]
