@@ -1,0 +1,62 @@
+# api for admin register
+###
+POST http://127.0.0.1:8000/admin-register/
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "email":"admin@gmail.com",
+    "password":"admin@123"
+}
+
+#===== Eduaction =====
+# api for eduaction all records listing
+###
+GET http://127.0.0.1:8000/about/
+Accept: application/json
+Authorization: Basic admin:admin@123
+
+# api for calling to post record
+###
+POST http://127.0.0.1:8000/about/
+Content-Type: application/json
+Authorization: Basic admin:admin@123
+
+{
+  "full_name": "Rahul Nair",
+  "title": "Frontend Developer",
+  "bio": "A creative frontend developer with experience in building responsive websites and user-friendly web applications using modern web technologies.",
+  "email": "rahul.nair@example.com",
+  "github_url": "https://github.com/rahulnair",
+  "linkedin_url": "https://www.linkedin.com/in/rahulnair",
+  "resume_download_url": "https://api.example.com/media/rahul-nair-resume.pdf"
+  
+}
+
+# api for calling eduaction record detail
+###
+GET http://127.0.0.1:8000/about/2/
+Accept: application/json
+Authorization: Basic admin:admin@123
+
+# api for calling update record
+###
+PUT http://127.0.0.1:8000/about/1/
+Content-Type: application/json
+Authorization: Basic admin:admin@123
+
+{
+  "full_name": "Arjun Raj-roy",
+  "title": "Software Developer-fresher",
+  "bio": "A passionate software developer focused on building reliable web applications and learning modern development technologies.",
+  "email": "arjunraj@example.com",
+  "github_url": "https://github.com/arjunraj",
+  "linkedin_url": "https://www.linkedin.com/in/arjunraj",
+  "resume_download_url": "https://api.example.com/media/arjun-raj-resume.pdf"
+}
+
+#api for calling to delete record
+###
+DELETE http://127.0.0.1:8000/about/2/
+Accept: application/json
+Authorization: Basic admin:admin@123
