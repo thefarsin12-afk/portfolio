@@ -9,8 +9,8 @@ Content-Type: application/json
     "password":"admin@123"
 }
 
-#===== education =====
-# api for eduaction all records listing
+#===== about =====
+# api for aboout all records listing
 ###
 GET http://127.0.0.1:8000/about/
 Accept: application/json
@@ -33,7 +33,7 @@ Authorization: Basic admin:admin@123
   
 }
 
-# api for calling eduaction record detail
+# api for calling about record detail
 ###
 GET http://127.0.0.1:8000/about/2/
 Accept: application/json
